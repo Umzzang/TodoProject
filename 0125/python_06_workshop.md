@@ -31,11 +31,18 @@ def low_and_up(st):
 # 3. 솔로 천국 만들기
 
 ```python
-def lonely(lst):
+def lonely(num_list):
     new_list = []
-    for i in range(len(lst)):
-        if lst.count(lst[i]) >= 2 and lst[i] not in new_list:
-            new_list += [lst[i]]
+    for i in range(len(num_list)):
+        new_list += [num_list[i]]
+        
+        if i >= len(num_list)-1:
+            break
+        else:
+            if num_list[i] == num_list[i+1]:
+                new_list = new_list[0:-1]
+                
+           
     return new_list
 ```
 
